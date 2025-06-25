@@ -11,9 +11,9 @@ export class CoursesListComponent {
   @Input() courses: Course[] = [];
   @Input() editable!: boolean;
 
-  @Output() showCourse = new EventEmitter<string>()
-  @Output() editCourse = new EventEmitter<string>()
-  @Output() deleteCourse = new EventEmitter<string>()
+  @Output() showCourse = new EventEmitter<string>();
+  @Output() editCourse = new EventEmitter<string>();
+  @Output() deleteCourse = new EventEmitter<string>();
 
 showCourseInfo(courseTitle: string) {
   this.showCourse.next(courseTitle)
