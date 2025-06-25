@@ -14,7 +14,7 @@ export class CourseCardComponent implements OnInit {
   @Input() duration!: number;
   @Input() authors!: string[];
 
-  @Output() clickOnShow = new EventEmitter<string>()
+  @Output() clickOnShow = new EventEmitter<string>();
 
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class CourseCardComponent implements OnInit {
   // this.duration = mockedCoursesList[1].duration
   this.authors = this.authors.map((authorId) => {
     const author = mockedAuthorsList.find((author) => author.id === authorId);
-    return author?.name as string
+    return author!.name;
   })    
   }
 
