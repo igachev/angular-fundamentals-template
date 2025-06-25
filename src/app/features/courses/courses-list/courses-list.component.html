@@ -9,7 +9,7 @@
         [duration]="course.duration"
         (clickOnShow)="showCourseInfo($event)"   
     >
-      <div [ngStyle]="{ 'width':'300px', 'display':'flex' }">
+      <div class="btn-container">
       <app-button [iconName]="'delete'" (click)="deleteCourse.next(course.title)"></app-button>
       <app-button [iconName]="'edit'" (click)="editCourse.next(course.title)"></app-button>
       </div>
