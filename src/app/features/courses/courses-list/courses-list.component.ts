@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Course } from '../courses.component';
 
 @Component({
   selector: 'app-courses-list',
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CoursesListComponent {
 
-  @Input() courses: any[] = [];
+  @Input() courses: Course[] = [];
   @Input() editable!: boolean;
 
   @Output() showCourse = new EventEmitter<string>()
@@ -16,6 +17,10 @@ export class CoursesListComponent {
 
 showCourseInfo(courseTitle: string) {
   this.showCourse.next(courseTitle)
+}
+
+stringToDate(value: string) {
+  return new Date(value)
 }
 
 }

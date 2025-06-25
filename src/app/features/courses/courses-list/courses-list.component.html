@@ -4,7 +4,7 @@
         [editable]="editable"
         [title]="course.title"
         [description]="course.description"
-        [creationDate]="course.creationDate"
+        [creationDate]="stringToDate(course.creationDate)"
         [authors]="course.authors"
         [duration]="course.duration"
         (clickOnShow)="showCourseInfo($event)"   

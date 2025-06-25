@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { mockedAuthorsList } from '@app/shared/mocks/mocks';
+import { Course } from '../courses/courses.component';
 
 @Component({
   selector: 'app-course-info',
@@ -8,14 +9,7 @@ import { mockedAuthorsList } from '@app/shared/mocks/mocks';
 })
 export class CourseInfoComponent implements OnInit {
   // Use the names for the input `course`.
-    @Input() course!: {
-      id: '',
-      title: '',
-      description: '',
-      authors: string[],
-      duration: 0,
-      creationDate: ""
-    }
+    @Input() course!: Course
 
     @Input() showCourseInfo!: boolean
     @Output() hideCourseEmitter = new EventEmitter<boolean>()

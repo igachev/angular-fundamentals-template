@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import { mockedCoursesList } from '@app/shared/mocks/mocks';
 
+export interface Course {
+      id: string;
+      title: string;
+      description: string;
+      authors: string[],
+      duration: number;
+      creationDate: string;
+};
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -8,13 +17,13 @@ import { mockedCoursesList } from '@app/shared/mocks/mocks';
 })
 export class CoursesComponent {
  mockedCoursesList = mockedCoursesList
-  course:any = {}
+  course!: Course
   showCourseInfo: boolean = false;
 
   onShowCourse(courseTitle: string) {
     console.log(`Show course ${courseTitle}`)
     let selectedCourse = mockedCoursesList.find((course) => course.title === courseTitle)
-    this.course = {...selectedCourse}
+    this.course = {...selectedCourse!}
     this.showCourseInfo = true;
   }
 
