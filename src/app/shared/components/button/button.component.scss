@@ -26,4 +26,15 @@
     &__single-icon {
         padding: 13px;
     }
+
+
 }
+
+   .icon {
+    background: white;
+    color: blue;
+    font-size: 1.5rem;
+        &:hover {
+            background: none;
+        }
+    }

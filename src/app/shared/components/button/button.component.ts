@@ -7,7 +7,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements AfterViewInit {
+export class ButtonComponent {
   constructor(library: FaIconLibrary) {
     library.addIconPacks(fas);
   }
@@ -16,9 +16,4 @@ export class ButtonComponent implements AfterViewInit {
   @Input() buttonText?: string;
   @Input() iconName?: string;
 
-  ngAfterViewInit(): void {
-      if(this.iconName === 'edit') {
-        
-      }
-  }
 }

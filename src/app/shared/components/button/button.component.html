@@ -1,6 +1,5 @@
 <div class="app-button"
- [ngStyle]="iconName ? {'background':'white','color':'blue','fontSize':'1.5rem'} : {}"
- 
+[ngClass]="iconName === 'edit' || iconName === 'delete' ? 'icon' : ''"
 >
   <!-- Replace the text below with your code -->
    <fa-icon *ngIf="iconName === 'edit'" [icon]="'pen'"></fa-icon>
