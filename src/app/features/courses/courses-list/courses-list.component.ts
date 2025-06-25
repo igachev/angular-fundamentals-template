@@ -16,11 +16,11 @@ export class CoursesListComponent {
   @Output() deleteCourse = new EventEmitter<string>();
 
 showCourseInfo(courseTitle: string) {
-  this.showCourse.next(courseTitle)
+  this.showCourse.next(courseTitle);
 }
 
 stringToDate(value: string) {
-  return new Date(value)
+  return new Date(value);
 }
 
 }
