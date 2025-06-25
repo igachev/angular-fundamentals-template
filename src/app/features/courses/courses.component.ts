@@ -16,26 +16,25 @@ export interface Course {
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent {
- mockedCoursesList = mockedCoursesList
-  course!: Course
+ mockedCoursesList = mockedCoursesList;
+  course!: Course;
   showCourseInfo: boolean = false;
 
   onShowCourse(courseTitle: string) {
-    console.log(`Show course ${courseTitle}`)
-    let selectedCourse = mockedCoursesList.find((course) => course.title === courseTitle)
-    this.course = {...selectedCourse!}
+    let selectedCourse = mockedCoursesList.find((course) => course.title === courseTitle);
+    this.course = {...selectedCourse!};
     this.showCourseInfo = true;
   }
 
   onEditCourse(courseTitle: string) {
-    console.log(`Edit course ${courseTitle}`)
+    console.log(`Edit course ${courseTitle}`);
   }
   onDeleteCourse(courseTitle: string) {
-    console.log(`Delete course ${courseTitle}`)
+    console.log(`Delete course ${courseTitle}`);
   }
 
   hideShowCourseInfo(showCourseInfo: boolean) {
-  this.showCourseInfo = showCourseInfo
+  this.showCourseInfo = showCourseInfo;
   }
   
 }
