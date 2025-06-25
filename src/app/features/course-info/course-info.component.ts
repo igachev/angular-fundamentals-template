@@ -16,7 +16,7 @@ export class CourseInfoComponent implements OnInit {
      ngOnInit(): void {
       this.course.authors = this.course.authors.map((authorId) => {
         const author = mockedAuthorsList.find((author) => author.id === authorId);
-        return author?.name as string
+        return author!.name
       });  
       }
 
